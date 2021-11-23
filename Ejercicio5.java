@@ -27,12 +27,7 @@ public class Ejercicio5 {
 				+ "4-Opcion D\t \r\n"
 				+ "0- Salir\n");
 
-		opcion = teclado.next();
-
-
-
-
-		
+		opcion = teclado.next();	
 
 
 			switch (opcion) { 
@@ -60,7 +55,8 @@ public class Ejercicio5 {
 				System.out.println("La opcion  " + opcion + "  no es correcta");
 
 			}
-		}while (opcion.equals("A") &&opcion.equals("B") && opcion.equals("C") &&opcion.equals("D") );
+		}while(!(opcion.equalsIgnoreCase("A") && opcion.equalsIgnoreCase("B") && opcion.equalsIgnoreCase("C")
+				&& opcion.equalsIgnoreCase("D") && opcion.equals("0") ));
 	}
 
 
@@ -73,16 +69,19 @@ public class Ejercicio5 {
 		System.out.println("Has seleccionado la opción: " + opcion + "\n" );
 		System.out.println("Ejecutando la opción: " + opcion  );
 
-
+	
+			
+		
+		try {
+				
 		System.out.println("Introduce un número");		
 		numeroUsuario1 = teclado.nextInt();
 		System.out.println("Introduce otro número");
 		numeroUsuario2 = teclado.nextInt();
-
-
-
-
-
+		}catch (NumberFormatException e){
+			System.out.print("Debes introducir un número");
+		}
+	
 
 		suma = numeroUsuario1 + numeroUsuario2;
 		resta = numeroUsuario1 - numeroUsuario2;
@@ -93,7 +92,7 @@ public class Ejercicio5 {
 		System.out.println(numeroUsuario1 + "-" + numeroUsuario2 + "=" + resta);
 		System.out.println(numeroUsuario1 + "*" + numeroUsuario2 + "=" + multi);
 		System.out.println(numeroUsuario1 + "/" + numeroUsuario2 + "=" + divi);
-
+	
 
 	}
 	public static void metodo2(){
