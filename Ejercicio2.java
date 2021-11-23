@@ -1,105 +1,72 @@
-package repaso;
+package examenEvalUno;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio2 {
 
-	static Scanner teclado = new Scanner (System.in);
-	static int array[] = new int [0];
-	static int numUsuario = 0;
-	static int numeroMetido = 0;
-	static int posicion = 0;
+	static Scanner teclado = new Scanner(System.in);
 
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		String opcion;	
 
 
 
 		do {
-			System.out.println("De cuantas posiciones quieres tu array?");
-			int posiciones = teclado.nextInt();
-			System.out.println(posiciones);
+			System.out.println("Menú de opciones\n"
 
-			numUsuario = menu();
-			switch(numUsuario)  {
+				+ "1-Opcion A \t \r\n"
+				+ "2-Opcion B\t \r\n"
+				+ "3-Opcion C\t \r\n"
+				+ "4-Opcion D\t \r\n");
 
-			case 1: 
-				conCeros(posiciones, array);
+		opcion = teclado.next();
+
+
+			switch (opcion) { 
+
+
+
+			case  "A" :
+
+				System.out.println("Has elegido Opción " + opcion);
+
 				break;
 
-			case 2:
-				conNumAle(posiciones, array);
+			case "B":
+				System.out.println("Has elegido Opción " + opcion);
+
 				break;
-			case 3:	
-				conNumInsert(posiciones, array, numeroMetido, posicion);
+
+			case "C":
+				System.out.println("Has elegido Opción " + opcion);
+
+				break;
+			case "D":
+				System.out.println("Has elegido Opción " + opcion);
+
+				break;
 			default:
+				System.out.println("Has elegido Opción " + opcion);
+				System.out.println("La opcion  " + opcion + "  no es correcta");
+
+
 			}
-		}while(numUsuario >0 && numUsuario <=3);
-	}
 
-
-	public static int menu() {
-
-		System.out.println("Como quieres inicializar tu array:\r\n"
-				+ "1.- Con ceros\r\n"
-				+ "2.- Con números aleatorios del 1 al 100\r\n"
-				+ "3.- Insertando los números manualmente.\r\n"
-				+"" );
-		return teclado.nextInt();
-	} 
-
-	public static void conCeros(int posiciones, int array[]) {
-
-		array = new int [posiciones];
-
-		System.out.println(Arrays.toString(array));
-
-	}
-
-	public static void conNumAle(int posiciones, int array[]) {
-		array = new int [posiciones];
-
-
-		for(int i = 0; i<array.length; i++) {
-			posiciones = (int) (Math.random()*100);
-			array[i] = posiciones;
-
-		}
-		System.out.println(Arrays.toString(array));
-
+		}while(!(opcion.equalsIgnoreCase("A") && opcion.equalsIgnoreCase("B") && opcion.equalsIgnoreCase("C") && opcion.equalsIgnoreCase("D") ));
 
 
 	}
 
-	public static void conNumInsert (int posiciones, int array[], int numeroMetido, int posicion){
-		array = new int [posiciones];
-		posicion = 0;
-		
-		while(posicion < posiciones){
-			System.out.print("Introduce el número para la posición "  + posicion );
-			numeroMetido = teclado.nextInt();
-			array[posicion]= numeroMetido;
-			posicion++;
-			
 
-		} 
-		System.out.println(Arrays.toString(array));
-
-
-
-		
-	}	
-}	
+}
 
 
 
 
 
 
-//Ejercicio 2
-//Modificar el programa anterior para preguntar después de insertar el número de posiciones 
-//pregunte si quiere inicializar el array a ceros (esta sería la funcionalidad anterior), 
-//con números aleatorios del 1 al 100 o insertar todos los números.
+
+

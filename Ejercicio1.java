@@ -1,30 +1,30 @@
-package repaso;
+package examenEvalUno;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio1 {
 
 	static Scanner teclado = new Scanner(System.in);
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
-	
-		
-					
-		
-		System.out.println("De cuántas posiciones quieres tu array?");
-		
-		int posiciones = teclado.nextInt();
-		int array[] = new int[posiciones];
-		
-		System.out.println(Arrays.toString(array));
-		
- 	}
-		
 
+		String opcion;
+
+		System.out.println("Menú de opciones\n"
+
+				+ "1-Opcion A \t \r\n"
+				+ "2-Opcion B\t \r\n"
+				+ "3-Opcion C\t \r\n"
+				+ "4-Opcion D\t \r\n");
+
+		opcion = teclado.next();
+		System.out.println("Has elegido Opción " + opcion);
+
+
+
+	}
 }
-	
-//Ejercicio 1
-//Crear un programa que pida al usuario de cuantas posiciones quiere crear un array (de enteros) e inicializarlo a 0.
+
+
+
