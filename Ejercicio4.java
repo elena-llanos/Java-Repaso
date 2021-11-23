@@ -17,7 +17,7 @@ public class Ejercicio4 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-
+		do {
 
 		System.out.println("Menú de opciones\n"
 
@@ -32,7 +32,7 @@ public class Ejercicio4 {
 
 
 
-		do {
+		
 
 			switch (opcion) { 
 
@@ -59,7 +59,8 @@ public class Ejercicio4 {
 				System.out.println("La opcion  " + opcion + "  no es correcta");
 
 			}
-		}while(opcion.equals("A") &&opcion.equals("B") && opcion.equals("C") &&opcion.equals("D") );
+		}while(!(opcion.equalsIgnoreCase("A") && opcion.equalsIgnoreCase("B") && opcion.equalsIgnoreCase("C")
+				&& opcion.equalsIgnoreCase("D") && opcion.equals("0") ));
 	}
 
 

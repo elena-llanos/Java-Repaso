@@ -18,7 +18,7 @@ public class Ejercicio5 {
 		// TODO Auto-generated method stub
 
 
-
+		do {
 		System.out.println("Menú de opciones\n"
 
 				+ "1-Opcion A \t \r\n"
@@ -32,7 +32,7 @@ public class Ejercicio5 {
 
 
 
-		do {
+		
 
 
 			switch (opcion) { 

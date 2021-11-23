@@ -11,10 +11,9 @@ public class Ejercicio3 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
 
-
-
 		do {
-			System.out.println("Menú de opciones\n"
+			
+				System.out.println("Menú de opciones\n"
 
 				+ "1-Opcion A \t \r\n"
 				+ "2-Opcion B\t \r\n"
@@ -22,68 +21,62 @@ public class Ejercicio3 {
 				+ "4-Opcion D\t \r\n"
 				+ "0- Salir\n");
 
-			opcion = teclado.next();
-
+				opcion = teclado.next();
+			
 
 			switch (opcion) { 
 
 
 			case "A" :
 				metodo1(opcion);
+				System.out.println("Has elegido Opción " + opcion);
 				break;
 
 			case "B":
-				metodo2();
+				metodo2(opcion);
+				System.out.println("Has elegido Opción " + opcion);
 				break;
 
 			case "C":
-				metodo3();
+				metodo3(opcion);
+				System.out.println("Has elegido Opción " + opcion);
 				break;
 			case "D":
-				metodo4();
+				metodo4(opcion);
+				System.out.println("Has elegido Opción " + opcion);
 				break;
 			case "0":
 				System.out.println("Salir");
-				break;
 			default:
-				System.out.println("Has elegido Opción " + opcion);
 				System.out.println("La opcion  " + opcion + "  no es correcta");
 
+
+
 			}
-		}while(!(opcion.equalsIgnoreCase("A") && opcion.equalsIgnoreCase("B") && opcion.equalsIgnoreCase("C") && opcion.equalsIgnoreCase("D") ));
+		}while(!(opcion.equalsIgnoreCase("A") && opcion.equalsIgnoreCase("B") && opcion.equalsIgnoreCase("C")
+				&& opcion.equalsIgnoreCase("D") && opcion.equals("0") ));
+
 
 	}
-
-
-
-
-
-
 
 	public static void metodo1(String opcion){
 		System.out.print("Has seleccionado la opción: " + opcion + "\n" );
-		System.out.println("Ejecutando la opción: " + opcion  );
-
-
-
-
+		System.out.println("Ejecutando la opción: " + opcion + "\n"  );
 
 	}
-	public static void metodo2(){
+	public static void metodo2(String opcion){
 		System.out.print("Has seleccionado la opción: " + opcion + "\n" );
-		System.out.print("Ejecutando la opción: " + opcion  );
-
+		System.out.print("Ejecutando la opción: " + opcion +"\n"  );
 
 	}
-	public static void metodo3(){
+	public static void metodo3(String opcion){
 		System.out.print("Has seleccionado la opción: " + opcion + "\n" );
-		System.out.print("Ejecutando la opción: " + opcion  );
-
+		System.out.print("Ejecutando la opción: " + opcion + "\n"  );
 
 	}
-	public static void metodo4(){
+	public static void metodo4(String opcion){
 		System.out.print("Has seleccionado la opción: " + opcion + "\n" );
-		System.out.print("Ejecutando la opción: " + opcion  );
+		System.out.print("Ejecutando la opción: " + opcion +"\n"  );
 
 
 	}
