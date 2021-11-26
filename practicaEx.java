@@ -1,4 +1,4 @@
-package arrays;
+package matrices;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -7,9 +7,13 @@ public class practicaEx {
 	static Scanner teclado  = new Scanner(System.in);
 
 
-	static int[] arrayentero ;
+	static int[][] matrizentero ;
 	static int pos = 0;
 	static int userNumber = 0;
+	static int numeroNuevo = 0;
+	static int posicionAmodificar = 0 ;
+	static int posicionAborrar = 0;
+	static int otroNumber = 0 ;
 
 	public static void main(String[] args) {
 		// El codigo que se ejecuta
@@ -66,61 +70,44 @@ public class practicaEx {
 		System.out.print("¿Qué posición quieres borrar?");
 		int posicionAborrar  = teclado.nextInt();
 		//tengo un array de una posicion menos
-		int [] arrayNuevo = new int [arrayentero.length -1];
-		for(int i = 0; i < arrayentero.length; i++) {
+		int [] [] matrizNuevo = new int [matrizentero.length -1]  [];
+		for(int i = 0; i < matrizentero.length; i++) {
 
 			if (i < posicionAborrar) {
-				arrayNuevo [i] = arrayentero [i];
+				matrizNuevo [i] = matrizentero [i];
 
 			}else  {
-				arrayNuevo [i -1] = arrayentero [i];
+				matrizNuevo [i -1] = matrizentero [i];
 			}
 		}
-		arrayentero = arrayNuevo;
+		matrizentero = matrizNuevo;
 		verArr();
 
 	}
 
 	private static void modifyElement() {
 		//Esta función pide la posición y el número que queremos modificar
+		System.out.print("¿Qué posición quieres modificar?");
+		int posicionAmodificar  = teclado.nextInt();
 
-		try {
+		System.out.print("¿Qué número quieres poner?");
+		int numeroNuevo  = teclado.nextInt();
 
-
-			System.out.print("¿Qué posición quieres modificar?");
-			int posicionAmodificar  = teclado.nextInt();
-
-			System.out.print("¿Qué número quieres poner?");
-			int numeroNuevo  = teclado.nextInt();
-
-			arrayentero[posicionAmodificar] = numeroNuevo;
-		}catch(Exception e) {
-			System.out.println("Error fatal, debes añadir un número");
-
-		}
+		matrizentero[posicionAmodificar] = numeroNuevo;
 		verArr();
 	}
 
 	private static void addElement() {
 		//Esta función añade un número en una posición que pedimos por teclado
 
-		try	{
+		System.out.print("¿Qué posición quieres añadir?");
+		int posicionAñadir  = teclado.nextInt();
+
+		System.out.print("¿Qué número quieres poner?");
+		int otroNumber  = teclado.nextInt();	
 
 
-			System.out.print("¿Qué posición quieres añadir?");
-			int posicionAñadir  = teclado.nextInt();
-
-
-			System.out.print("¿Qué número quieres poner?");
-			int otroNumber  = teclado.nextInt();
-
-
-
-			arrayentero [posicionAñadir] = otroNumber;
-		}catch(Exception e) {
-			System.out.println("Error fatal, debes añadir un número");
-		}
-
+		matrizentero [posicionAñadir] = otroNumber;
 		verArr();
 	}
 	public static String menu() {
@@ -138,21 +125,26 @@ public class practicaEx {
 	public static void iniArr() {
 
 		//Función de inicialización del array
-		arrayentero = new int [9];				
+		int matrizentero [][] =  new int[3][2];		
 
-		for (int i = 0; i < arrayentero.length; i++);{
-			int i = 0;
-			arrayentero[i] = -1;
+		for (int i = 0; i < 3; i++){
 
-
-
-			System.out.println(Arrays.toString(arrayentero));
+			for(int j = 0; j < 2; j++) {
+				i++;
+				j++;
+			}
+			
+					
+			System.out.println(Arrays.toString(matrizentero));
 		}
+
+			
+		
 
 	}
 	public static void verArr() {
 		//Función que muestra el array
-		System.out.println(Arrays.toString(arrayentero));
+		System.out.println(Arrays.toString(matrizentero));
 		System.out.println("\n");
 
 
